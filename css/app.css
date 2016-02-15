@@ -1,0 +1,257 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+@-webkit-keyframes jiggle {
+  0% {
+    bottom: 0; }
+  50% {
+    bottom: 0.25rem; }
+  100% {
+    bottom: 0; } }
+@keyframes jiggle {
+  0% {
+    bottom: 0; }
+  50% {
+    bottom: 0.25rem; }
+  100% {
+    bottom: 0; } }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-family: "roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  background: #eee; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.row {
+  max-width: 61.875rem;
+  padding: 0 0.9375rem;
+  margin: 0 auto; }
+
+.main {
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
+  background: #eee; }
+
+.header {
+  height: 5rem;
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+  background: white;
+  background: white;
+  border-bottom: #ededed; }
+  .header .row {
+    height: 100%;
+    position: relative; }
+  .header .logo {
+    position: absolute;
+    top: 0;
+    left: 0.9375rem;
+    display: block;
+    height: 100%;
+    line-height: 5rem; }
+    .header .logo svg {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-55%);
+      transform: translateY(-55%);
+      display: inline;
+      max-height: 1.5rem;
+      max-width: 9.70833rem;
+      transition: fill 250ms ease; }
+      .header .logo svg path {
+        fill: #E34F51; }
+      .header .logo svg:hover path {
+        fill: #304041; }
+  .header .login {
+    position: absolute;
+    top: 0rem;
+    right: 0.9375rem;
+    display: block;
+    height: 100%;
+    font-weight: bold;
+    color: #E34F51;
+    text-decoration: none;
+    line-height: 5rem; }
+    .header .login svg {
+      max-height: 1.5rem;
+      max-width: 1.2rem;
+      margin-bottom: -0.1875rem; }
+      .header .login svg path {
+        fill: #E34F51; }
+    .header .login:hover {
+      color: #304041; }
+      .header .login:hover svg path {
+        fill: #304041; }
+
+.hero {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .hero .iphone {
+    position: relative; }
+    .hero .iphone .body {
+      top: 0;
+      left: 0;
+      max-width: 342px; }
+    .hero .iphone .screen {
+      position: absolute;
+      top: 105px;
+      left: 28px;
+      width: 290px;
+      height: 512px;
+      border-radius: 2px;
+      overflow: hidden;
+      text-align: center;
+      background: black; }
+      .hero .iphone .screen img {
+        position: absolute;
+        left: -310px;
+        max-height: 100%; }
+
+.cta {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0 0 0 0.9375rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .cta__wrapper {
+    width: 400px;
+    background: white;
+    border: 1px solid #ededed; }
+  .cta__logo {
+    height: 3.75rem;
+    text-align: center; }
+    .cta__logo img {
+      max-height: 1.8125rem;
+      margin: 3.125rem 2rem 1rem 2rem; }
+  .cta__app-store {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 0.9375rem;
+    margin-bottom: 3.125rem; }
+    .cta__app-store a {
+      text-align: center;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      padding: 0 0.625rem;
+      max-height: 2.9375rem; }
+      .cta__app-store a:nth-child(1) {
+        text-align: right; }
+      .cta__app-store a:nth-child(2) {
+        text-align: left; }
+    .cta__app-store img {
+      max-width: 8.625rem;
+      width: 8.625rem; }
+      .cta__app-store img:hover {
+        opacity: .85;
+        position: relative;
+        bottom: 0.25rem;
+        -webkit-animation: jiggle 200ms infinite;
+        animation: jiggle 200ms infinite; }
+  .cta__slideshow span {
+    font-family: "roboto";
+    color: #bbb; }
+  .cta__slideshow #slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    height: 7.5rem;
+    list-style: none; }
+    .cta__slideshow #slider li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      height: 7.5rem;
+      line-height: 7.5rem;
+      opacity: 0; }
+      .cta__slideshow #slider li img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 40%;
+        width: auto; }
+  .cta__headline {
+    text-align: center; }
+    .cta__headline img {
+      margin: 3.125rem 2.8125rem 2.1875rem 2.8125rem; }
+
+.footer {
+  background: white;
+  border-top: 1px solid #ededed; }
+  .footer .row:nth-child(1) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .footer .row:nth-child(2) {
+    padding: 1rem 0;
+    text-align: center;
+    color: #304041;
+    border-top: 1px solid #ededed; }
+    .footer .row:nth-child(2) small {
+      font-size: 0.875rem;
+      color: #4C6061; }
+  .footer .column {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+  .footer__nav {
+    list-style: none;
+    padding: 0;
+    font-size: 1.125rem;
+    margin-top: 1.5rem; }
+    .footer__nav > li a {
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+      color: #304041; }
+      .footer__nav > li a:hover {
+        color: #E34F51; }
+  .footer__nav-sub {
+    list-style: none;
+    padding: 0;
+    margin-top: .5rem; }
+    .footer__nav-sub > li {
+      padding: .3rem 0;
+      font-size: 0.875rem;
+      letter-spacing: 0.01312rem; }
+      .footer__nav-sub > li a {
+        font-weight: 400;
+        color: #304041; }
+        .footer__nav-sub > li a i {
+          margin-right: .25rem; }
+        .footer__nav-sub > li a:hover {
+          color: #E34F51; }
